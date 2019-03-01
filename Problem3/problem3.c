@@ -24,7 +24,7 @@ void mygrep(FILE *fp,char *find){
 	char c1[500];
 	while(fscanf(fp , "%[^\n]\n" , c1) != EOF){
 		if(strstr(c1 , find) != NULL){
-    	printf("%s\n" , line);
+    	printf("%s\n" , c1);
     	}
     	else continue;
 	}
@@ -35,7 +35,7 @@ void myreplace(FILE *fp, char *find, char *replace){
 	int flen = strlen(find);
 	while(fscanf(fp , "%[^\n]\n" , c1) != EOF){
 		if(strstr(c1 , find) != NULL){
-			strcpy(c1, replace)
+			strcpy(c1, replace);
 		}
 	}
 }
